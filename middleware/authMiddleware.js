@@ -14,7 +14,7 @@ const authenticate = async (req, res, next) => {
                 error: "UnAuthorized"
             })
         }
-        logger.info(decodedValue, 'logged in')
+        logger.info(decodedValue.name, 'acessing:', req.path)
         res.decodedValue = decodedValue
         next()
     } catch (error) {
@@ -35,7 +35,7 @@ const authenticateAdmin = async (req, res, next) => {
                 error: "UnAuthorized"
             })
         }
-        logger.info(decodedValue, 'logged in')
+        logger.info(decodedValue.name, 'acessing:', req.path)
         res.decodedValue = decodedValue
         if (decodedValue.role === 'admin') {
             next()

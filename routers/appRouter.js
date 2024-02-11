@@ -33,6 +33,7 @@ router.post('/login', async (req, res) => {
                     token
                 })
                 logger.debug('token Issued', token)
+                logger.info(`${user.username} logged in`)
             } else {
                 logger.error('Wrong Password')
                 res.status(500).json({
