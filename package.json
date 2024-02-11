@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "start": "ENV=error PORT=80 node app.js",
+    "dev": "node --watch app.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "log4js": "^6.9.1",
+    "mongoose": "^8.1.1",
+    "redis": "^4.6.13"
+  }
+}

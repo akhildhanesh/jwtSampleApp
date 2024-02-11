@@ -1,0 +1,25 @@
+{
+    "appenders": {
+        "dev": {
+            "type": "file",
+            "filename": "./logs/debug.log",
+            "pattern": "-yyyy-MM-dd",
+            "keepFileExt": true,
+            "daysToKeep": 10,
+            "backups": 5,
+            "maxLogSize": 1048576
+        },
+        "devConsole": {
+            "type": "console"
+        }
+    },
+    "categories": {
+        "default": {
+            "appenders": [
+                "dev",
+                "devConsole"
+            ],
+            "level": "info"
+        }
+    }
+}
